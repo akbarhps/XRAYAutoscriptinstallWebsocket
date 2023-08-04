@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <h2 align="center">
 <hr>
-🚀 Autoscript Websocket Lite By Vinstechmy (FREE !)🚀
+Autoscript Websocket XRAY TLS/XTLS
 <h2><hr>
   
 <h2 align="center"> ♦️Supported Linux Distribution♦️</h2>
@@ -25,7 +25,6 @@
 <br>
 [ OTHER SERVICES ] <br>
 <br>
-✅ ADS BLOCKS FUNCTION (CREDIT TO ABI DARWISH) <br>
 ✅ YAML LINK <br>
 ✅ DNS CHANGER <br>
 ✅ AUTOSCRIPT UPDATE <br>
