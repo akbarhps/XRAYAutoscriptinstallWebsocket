@@ -35,20 +35,37 @@ Autoscript Websocket Multiport XRAY TLS/XTLS
 ✅ AUTOMATIC VPS REBOOT <br>
 ✅ BACKUP & RESTORE <br></br>
 
-♦️ For Debian 10 Only For First Time Installation (Update Repo) <br>
 
-  ```html
- apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
-  ```
-  ♦️ For Ubuntu 18.04 Only For First Time Installation (Update Repo) <br>
-  
-  ```html
- apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
- ```
-♦️ Installation Link<br>
+### How to install:
 
-  ```html
+1. Create VPS using any cloud provider you prefer
+2. Register domain from any domain registrar
+3. Set DNS Records from your domain registrar to VPS public IP
+4. Wait until it takes effect
+5. Run below commands:
+
+#### For Debian 10 Only For First Time Installation
+```bash
+apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
+```
+
+#### For Ubuntu 18.04 Only For First Time Installation
+```bash
+apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
+```
+
+#### Then run:
+```bash
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://github.com/akbarhps/XRAYAutoscriptinstallWebsocket/raw/main/setup-lite.sh && chmod +x setup-lite.sh && ./setup-lite.sh
-  ```
+```
 
-</b>
+6. If all steps above has succeed, Open Cloudflare and register your domain by setting your DNS Records to:
+
+```
+Type | Name | Content   | Proxy status | TTL
+A    | @    | Public IP | DNS Only     | Auto
+```
+
+7. Set your Domain Registrar `Nameservers` to `Cloudflare Nameservers`
+8. In Cloudflare, go to SSL/TLS tab and set `Your SSL/TLS encryption mode` to `Full` and enable `SSL/TLS Recommender`
+9. In Cloudflare, go to `Network`, scroll to `Network` section and enable `gRPC` and wait few minutes until it takes effect
